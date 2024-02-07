@@ -46,13 +46,13 @@ public class test {
                 }
                 sourceArray=sourceString.split("");
 
-                FileWriter myWriter = new FileWriter("encoded");
+                FileWriter myWriter = new FileWriter("encoded.txt");
                 for (String str : sourceArray) {
                     myWriter.write(huff.codes.find(str).a);
                 }
                 myWriter.close();
                 try {
-                    File encoded = new File("encoded");
+                    File encoded = new File("encoded.txt");
                     Scanner encodedReader = new Scanner(encoded);
                     String[] encodedarray;
                     String encode = "";

@@ -8,9 +8,6 @@ public void setRoot(Node<T> val){
     public void test(){
         System.out.println(root.value);
     }
-
-
-
     public String decode(String[] stringArray){
         Node<T> iterator= root;
         String decoded="";
@@ -27,21 +24,6 @@ public void setRoot(Node<T> val){
                 }
             }
         return decoded;
-    }
-    public boolean checker(String code){
-        Node<T> iterator= root;
-        for (int i=0;i<code.length();i++){
-            if (code.charAt(i)=='0'&&iterator.left!=null){
-                iterator=iterator.left;
-            }
-            else if (code.charAt(i)=='1'&&iterator.right!=null){
-                iterator=iterator.right;
-            }
-            else {
-                return false;
-            }
-        }
-return true;
     }
     public void findCodes(){
         findCodes(root,"");
